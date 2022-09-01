@@ -1,0 +1,33 @@
+{% extends "layout/default.html.twig" %}
+
+{% block body %}
+
+	{% for article in articles %}
+
+
+		<div class="container">
+			<div class="row justify-content-center">
+				<div class="col-md-8">
+					<div class="media g-mb-30 media-comment">
+						<div class="media-body u-shadow-v18 g-pa-30">
+							<div class="g-mb-15">
+								<h5 class="h5 g-color-gray-dark-v1 mb-0">{{article.title|upper}}</h5>
+                            </div>
+							<br>
+							<p>
+								<a href="/article/{{article.id}}">{{article.excerpt|raw }}</a>
+                                
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<br>
+
+
+	{% endfor %}
+
+
+{% endblock %}

@@ -1,0 +1,15 @@
+{% extends "layout/default.html.twig" %}
+
+{% block body %}
+
+
+    {{ form_start(registrationForm,{ attr:{"class":"form2 "}}) }}
+        <h1>Inscription</h1>
+        {{ form_row(registrationForm.email) }}
+        {{ form_row(registrationForm.Password) }}
+        <br>
+        {{ form_row(registrationForm.agreeTerms) }}
+        <br>
+        <button type="submit" class="btn-primary">S'inscrire</button>
+    {{ form_end(registrationForm) }}
+{% endblock %}
